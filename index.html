@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<style type="text/css">
+body {background:#011c59; display: flex; align-items: center; justify-content: center; min-height: 100vh;}*{margin: 0; padding: 0; box-sizing: border-box;}
+ul {height: 60px; background:#022f95; border-radius: 5px; position: relative;
+ box-shadow: 0 5px 20px black; display: flex; align-items: center; justify-content: center; z-index: 3;}
+ li {position: relative; display: inline-block; cursor: pointer;  backdrop-filter: blur(15px); z-index: 1000; padding: 20px 30px;}
+ img {width: 33px; height: 33px; border-radius: 50%;} 
+ ion-icon {width: 33px; height: 33px; color: white; z-index: 5; }
+ 
+ div {width:53px; height:43px; background:aqua; position: absolute; display: flex; flex-direction: column;  border-radius: 4px; opacity: 0.8; z-index: 1; top: -20px; box-shadow: 0 0 10px aqua, 0 0  20px aqua ; left:20px; transition: 0.6s;}
+     .li.i.active  ~ div {left: 20px;}
+     .li.ii.active ~ div {left: 110px;}
+     .li.iii.active  ~ div {left: 207px;}
+     .li.iiii.active ~ div {left: 298px;}
+     .li.iiiii.active ~ div {left: 390px;}
+</style>
+</head>
+<body>
+<nav>
+<ul>
+  <li class="li i"><ion-icon name="home-outline"></ion-icon></li>
+  <li class="li ii"><ion-icon name="person-outline"></ion-icon></li>
+  <li class="li iii"><ion-icon name="add-circle-outline" class="icon1"></ion-icon></li>
+  <li class="li iiii"><ion-icon name="chatbox-ellipses-outline"></ion-icon></li>
+  <li class="li iiiii"><img src="https://media-exp1.licdn.com/dms/image/C4E03AQGYTfDVuTekdw/profile-displayphoto-shrink_100_100/0/1646331015779?e=1655337600&v=beta&t=TOQQ0cGsuwFw3DsX3gtLqF7ZJ3CcEc2LreL631KZH58"></li>
+  <div></div>
+</ul>
+</nav>
+<script type="text/javascript">
+const li = document.querySelectorAll('.li');
+  function activeLink(){
+    li.forEach((item) =>
+    item.classList.remove('active'));
+    this.classList.add('active');
+  }
+  li.forEach((item) =>
+  item.addEventListener('click',activeLink));
+</script>
+
+</body>
+</html>
